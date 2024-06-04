@@ -46,7 +46,6 @@ public class Skateboardmovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                Debug.Log("Kickflip");
                 if (Input.GetKey(KeyCode.S))
                 {
                     Debug.Log("Christ Air");
