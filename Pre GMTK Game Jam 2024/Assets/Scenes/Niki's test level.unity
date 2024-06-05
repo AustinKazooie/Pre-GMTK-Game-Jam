@@ -382,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpKey: 273
+  keepMomentumPercantage: 50
 --- !u!114 &1184290454
 MonoBehaviour:
   m_ObjectHideFlags: 0

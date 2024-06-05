@@ -7,6 +7,8 @@ public class NikiScateboardScript : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private KeyCode jumpKey;
+    [SerializeField] private float keepMomentumPercantage;
+    private Vector2 lastBodyVelocity;
     private Rigidbody2D body;
     private bool grounded;
 
@@ -16,6 +18,10 @@ public class NikiScateboardScript : MonoBehaviour
     }
     private void Update()
     {
+        if (body.velocity.x !=0)
+        {
+            lastBodyVelocity = body.velocity;
+        }
         float horizontalInput = Input.GetAxis("Horizontal");
         if (horizontalInput > 0.01f)
         {
@@ -58,8 +64,13 @@ public class NikiScateboardScript : MonoBehaviour
             }
         }
         if (Input.GetKey(jumpKey) && grounded)
-            Jump();
-
+        {
+            if (horizontalInput == 0)
+            {
+                body.velocity = new Vector2(keepMomentumPercantage*lastBodyVelocity.x/100, body.velocity.y);
+            }
+                Jump();
+        }
     }
     private void Jump()
     {
