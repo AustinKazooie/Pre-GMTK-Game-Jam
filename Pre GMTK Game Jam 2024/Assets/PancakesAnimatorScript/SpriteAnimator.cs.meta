@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 07e698761604b1d4ba4f128b67eb1fa4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playersprite: {instanceID: 0}
+  - RightSprite: {fileID: 21300000, guid: f1e921efb750bf845bdbab8ca8072ba5, type: 3}
+  - LeftSprite: {fileID: 21300000, guid: 46eb46992c9359648a978bd988a3c5e5, type: 3}
+  - JumpSprite: {fileID: 21300000, guid: 915e991070ab3b24ca25d314ed078384, type: 3}
+  - IdleSprite: {fileID: 21300000, guid: 915e991070ab3b24ca25d314ed078384, type: 3}
+  - MyRigidbody: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
