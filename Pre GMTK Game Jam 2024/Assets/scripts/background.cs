@@ -6,13 +6,15 @@ using UnityEngine;
 public class background: MonoBehaviour
 {
     public Rigidbody2D body;
+    public Rigidbody2D playerBody;
     public float speed;
+    private void Start()
+    {
+        playerBody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        
-        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-
+        body.velocity = new Vector2(playerBody.velocity.x * speed/10, body.velocity.y);
     }
 
 
